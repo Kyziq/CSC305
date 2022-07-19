@@ -6,13 +6,17 @@
 typedef struct User
 {
     int userLevel; // userLevel, 1 = admin, 2 = user
-} user;
+};
 
-typedef struct Movie
+struct movie
 {
-    char movieName[50];
-    float movieFee;
-} movie;
+    char name[32];
+    char date[16];
+    char time[16];
+    int hall;
+    int seat;
+    float price;
+};
 
 /* User-defined functions */
 int welcomeMessage()
@@ -32,24 +36,19 @@ int welcomeMessage()
 
 int userFunction(int input)
 {
-    if (input == 1)
+    if (input == 1) // To purchase ticket
     {
-        printf("Movie name?\n");
-        printf("----------------------\n");
-        printf("Press 1 for Dr Strange Multiverse of Madness\n");
-        printf("Press 2 for Fantastic Beast The Secrets of Dumbledore\n");
-        printf("Press 3 for Resident Evil Welcome to Raccoon City\n");
-        printf("Press 4 for Exiting the program\n");
-        // To purchase ticket
+        printf("Choose your movie below:\n");
+        printf("1. Dr Strange Multiverse of Madness\n");
+        printf("2. Fantastic Beast The Secrets of Dumbledore\n");
+        printf("3. Resident Evil Welcome to Raccoon City\n");
+        printf("4. Exit\n");
     }
-    else if (input == 2)
+    else if (input == 2) // To cancel the seat
     {
-
-        // To cancel the seat
-    }
-    else if (input == 3)
+        }
+    else if (input == 3) // Exit
     {
-        // Exit
         printf("See you soon!\n");
         exit(0);
     }
@@ -57,57 +56,44 @@ int userFunction(int input)
 
 int adminFunction(int input)
 {
-    if (input == 1)
+    if (input == 1) // View reserved tickets
     {
-        // View reserved tickets
     }
-    else if (input == 2)
+    else if (input == 2) // Edit price of the tickets
     {
-        // Edit price of the tickets
     }
-    else if (input == 3)
+    else if (input == 3) // Exit
     {
-        // Exit
         printf("See you soon!\n");
         exit(0);
     }
 }
 // declaring struct movie dictionary
-struct movie
-{
-    char name[32];
-    char date[16];
-    char time[16];
-    int hall;
-    int seat;
-    float price;
-};
+
 /* Main function */
 int main()
 {
-    // inserting information into dr strange movie
+    // Insert movies information
     struct movie drstrange;
     strcpy(drstrange.name, "Dr Strange Multiverse of Madness");
     strcpy(drstrange.date, "27-07-2022");
     strcpy(drstrange.time, "8.00p.m.");
     drstrange.price = 17.5;
 
-    // inserting information into fantastic beast movie
     struct movie fantastic;
     strcpy(fantastic.name, "Fantastic Beast The Secrets of Dumbledore");
     strcpy(fantastic.date, "28-07-2022");
     strcpy(fantastic.time, "4.00p.m.");
     fantastic.price = 18.50;
 
-    // inserting information into resident evil movie
     struct movie resident;
     strcpy(resident.name, "Resident Evil Welcome to Raccoon City");
     strcpy(resident.date, "28-07-2022");
     strcpy(resident.time, "6.00p.m.");
     resident.price = 19.00;
 
+    //
     int loginInput = welcomeMessage();
-
     int input;
     if (loginInput == 1) // admin
     {
