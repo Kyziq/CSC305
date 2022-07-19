@@ -34,10 +34,17 @@ int userFunction(int input)
 {
     if (input == 1)
     {
+        printf("Movie name?\n");
+        printf("----------------------\n");
+        printf("Press 1 for Dr Strange Multiverse of Madness\n");
+        printf("Press 2 for Fantastic Beast The Secrets of Dumbledore\n");
+        printf("Press 3 for Resident Evil Welcome to Raccoon City\n");
+        printf("Press 4 for Exiting the program\n");
         // To purchase ticket
     }
     else if (input == 2)
     {
+
         // To cancel the seat
     }
     else if (input == 3)
@@ -66,9 +73,36 @@ int adminFunction(int input)
     }
 }
 
+struct movie
+{
+    char name[32];
+    char date[16];
+    char time[16];
+    int hall;
+    int seat;
+    float price;
+};
 /* Main function */
 int main()
 {
+    struct movie drstrange;
+    strcpy(drstrange.name, "Dr Strange Multiverse of Madness");
+    strcpy(drstrange.date, "27-07-2022");
+    strcpy(drstrange.time, "8.00p.m.");
+    drstrange.price = 17.5;
+
+    struct movie fantastic;
+    strcpy(fantastic.name, "Fantastic Beast The Secrets of Dumbledore");
+    strcpy(fantastic.date, "28-07-2022");
+    strcpy(fantastic.time, "4.00p.m.");
+    fantastic.price = 18.50;
+
+    struct movie resident;
+    strcpy(resident.name, "Resident Evil Welcome to Raccoon City");
+    strcpy(resident.date, "28-07-2022");
+    strcpy(resident.time, "6.00p.m.");
+    resident.price = 19.00;
+
     int loginInput = welcomeMessage();
 
     int input;
