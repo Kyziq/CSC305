@@ -52,11 +52,11 @@ int adminFunction(int input)
 {
     if (input == 1)
     {
-        // View the reserved tickets
+        // View reserved tickets
     }
     else if (input == 2)
     {
-        // Edit the price of ticket
+        // Edit price of the tickets
     }
     else if (input == 3)
     {
