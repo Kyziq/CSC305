@@ -72,7 +72,7 @@ int adminFunction(int input)
         exit(0);
     }
 }
-
+// declaring struct movie dictionary
 struct movie
 {
     char name[32];
@@ -85,18 +85,21 @@ struct movie
 /* Main function */
 int main()
 {
+    // inserting information into dr strange movie
     struct movie drstrange;
     strcpy(drstrange.name, "Dr Strange Multiverse of Madness");
     strcpy(drstrange.date, "27-07-2022");
     strcpy(drstrange.time, "8.00p.m.");
     drstrange.price = 17.5;
 
+    // inserting information into fantastic beast movie
     struct movie fantastic;
     strcpy(fantastic.name, "Fantastic Beast The Secrets of Dumbledore");
     strcpy(fantastic.date, "28-07-2022");
     strcpy(fantastic.time, "4.00p.m.");
     fantastic.price = 18.50;
 
+    // inserting information into resident evil movie
     struct movie resident;
     strcpy(resident.name, "Resident Evil Welcome to Raccoon City");
     strcpy(resident.date, "28-07-2022");
