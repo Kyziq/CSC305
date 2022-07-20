@@ -39,7 +39,6 @@ int userFunction(int input)
 {
     if (input == 1) // To purchase ticket
     {
-<<<<<<< HEAD
         int userInput;
         printf("Movie name?\n");
         printf("----------------------\n");
@@ -50,25 +49,13 @@ int userFunction(int input)
         scanf("%d", &userInput);
         return userInput;
         // To book movie
-=======
-        printf("Choose your movie below:\n");
-        printf("1. Dr Strange Multiverse of Madness\n");
-        printf("2. Fantastic Beast The Secrets of Dumbledore\n");
-        printf("3. Resident Evil Welcome to Raccoon City\n");
-        printf("4. Exit\n");
->>>>>>> d655d4031d841d1174345a41dc138412ab556522
     }
     else if (input == 2) // To cancel the seat
     {
-<<<<<<< HEAD
 
         // To cancel the booking
     }
     else if (input == 3)
-=======
-        }
-    else if (input == 3) // Exit
->>>>>>> d655d4031d841d1174345a41dc138412ab556522
     {
         printf("See you soon!\n");
         exit(0);
@@ -90,7 +77,6 @@ int adminFunction(int input)
     }
 }
 // declaring struct movie dictionary
-<<<<<<< HEAD
 struct movie
 {
     char name[64];
@@ -109,25 +95,6 @@ int main()
     // declaring movie
     struct movie drstrange;
     struct movie fantastic;
-=======
-
-/* Main function */
-int main()
-{
-    // Insert movies information
-    struct movie drstrange;
-    strcpy(drstrange.name, "Dr Strange Multiverse of Madness");
-    strcpy(drstrange.date, "27-07-2022");
-    strcpy(drstrange.time, "8.00p.m.");
-    drstrange.price = 17.5;
-
-    struct movie fantastic;
-    strcpy(fantastic.name, "Fantastic Beast The Secrets of Dumbledore");
-    strcpy(fantastic.date, "28-07-2022");
-    strcpy(fantastic.time, "4.00p.m.");
-    fantastic.price = 18.50;
-
->>>>>>> d655d4031d841d1174345a41dc138412ab556522
     struct movie resident;
 
     //
@@ -162,7 +129,7 @@ int main()
         exit(0);
     }
 
-        if (userInput == 1)
+    if (userInput == 1)
     {
         drstrange = getSeat1();
         printf("\nDisplaying information\n");
