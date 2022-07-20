@@ -7,13 +7,17 @@
 typedef struct User
 {
     int userLevel; // userLevel, 1 = admin, 2 = user
-} user;
+};
 
-typedef struct Movie
+struct movie
 {
-    char movieName[50];
-    float movieFee;
-} movie;
+    char name[32];
+    char date[16];
+    char time[16];
+    int hall;
+    int seat;
+    float price;
+};
 
 /* User-defined functions */
 int welcomeMessage()
@@ -33,8 +37,9 @@ int welcomeMessage()
 
 int userFunction(int input)
 {
-    if (input == 1)
+    if (input == 1) // To purchase ticket
     {
+<<<<<<< HEAD
         int userInput;
         printf("Movie name?\n");
         printf("----------------------\n");
@@ -45,15 +50,26 @@ int userFunction(int input)
         scanf("%d", &userInput);
         return userInput;
         // To book movie
+=======
+        printf("Choose your movie below:\n");
+        printf("1. Dr Strange Multiverse of Madness\n");
+        printf("2. Fantastic Beast The Secrets of Dumbledore\n");
+        printf("3. Resident Evil Welcome to Raccoon City\n");
+        printf("4. Exit\n");
+>>>>>>> d655d4031d841d1174345a41dc138412ab556522
     }
-    else if (input == 2)
+    else if (input == 2) // To cancel the seat
     {
+<<<<<<< HEAD
 
         // To cancel the booking
     }
     else if (input == 3)
+=======
+        }
+    else if (input == 3) // Exit
+>>>>>>> d655d4031d841d1174345a41dc138412ab556522
     {
-        // Exit
         printf("See you soon!\n");
         exit(0);
     }
@@ -61,22 +77,20 @@ int userFunction(int input)
 
 int adminFunction(int input)
 {
-    if (input == 1)
+    if (input == 1) // View reserved tickets
     {
-        // View reserved tickets
     }
-    else if (input == 2)
+    else if (input == 2) // Edit price of the tickets
     {
-        // Edit price of the tickets
     }
-    else if (input == 3)
+    else if (input == 3) // Exit
     {
-        // Exit
         printf("See you soon!\n");
         exit(0);
     }
 }
 // declaring struct movie dictionary
+<<<<<<< HEAD
 struct movie
 {
     char name[64];
@@ -95,10 +109,29 @@ int main()
     // declaring movie
     struct movie drstrange;
     struct movie fantastic;
+=======
+
+/* Main function */
+int main()
+{
+    // Insert movies information
+    struct movie drstrange;
+    strcpy(drstrange.name, "Dr Strange Multiverse of Madness");
+    strcpy(drstrange.date, "27-07-2022");
+    strcpy(drstrange.time, "8.00p.m.");
+    drstrange.price = 17.5;
+
+    struct movie fantastic;
+    strcpy(fantastic.name, "Fantastic Beast The Secrets of Dumbledore");
+    strcpy(fantastic.date, "28-07-2022");
+    strcpy(fantastic.time, "4.00p.m.");
+    fantastic.price = 18.50;
+
+>>>>>>> d655d4031d841d1174345a41dc138412ab556522
     struct movie resident;
 
+    //
     int loginInput = welcomeMessage();
-
     int input;
     int userInput;
     if (loginInput == 1) // admin
