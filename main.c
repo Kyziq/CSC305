@@ -95,9 +95,9 @@ struct movie edit3();
 int main()
 {
     // declaring movie
-    struct movie drstrange;
-    struct movie fantastic;
-    struct movie resident;
+    struct movie movie1;
+    struct movie movie2;
+    struct movie movie3;
 
     //
     int loginInput = welcomeMessage();
@@ -134,67 +134,67 @@ int main()
 
     if (adminInput == 1)
     {
-        drstrange = edit1();
+        movie1 = edit1();
         printf("\nDisplaying information\n");
-        printf("Name: %s", drstrange.name);
-        printf("\nHall: %d", drstrange.hall);
-        printf("\nDate: %s", drstrange.date);
-        printf("\nTime: %s", drstrange.time);
-        printf("\nPrice: RM %.2f", drstrange.price);
+        printf("Name: %s", movie1.name);
+        printf("\nHall: %d", movie1.hall);
+        printf("\nDate: %s", movie1.date);
+        printf("\nTime: %s", movie1.time);
+        printf("\nPrice: RM %.2f", movie1.price);
     }
     else if (adminInput == 2)
     {
-        fantastic = edit1();
+        movie2 = edit1();
         printf("\nDisplaying information\n");
-        printf("Name: %s", fantastic.name);
-        printf("\nHall: %d", fantastic.hall);
-        printf("\nDate: %s", fantastic.date);
-        printf("\nTime: %s", fantastic.time);
-        printf("\nPrice: RM %.2f", fantastic.price);
+        printf("Name: %s", movie2.name);
+        printf("\nHall: %d", movie2.hall);
+        printf("\nDate: %s", movie2.date);
+        printf("\nTime: %s", movie2.time);
+        printf("\nPrice: RM %.2f", movie2.price);
     }
     else if (adminInput == 3)
     {
-        resident = edit1();
+        movie3 = edit1();
         printf("\nDisplaying information\n");
-        printf("Name: %s", resident.name);
-        printf("\nHall: %d", resident.hall);
-        printf("\nDate: %s", resident.date);
-        printf("\nTime: %s", resident.time);
-        printf("\nPrice: RM %.2f", resident.price);
+        printf("Name: %s", movie3.name);
+        printf("\nHall: %d", movie3.hall);
+        printf("\nDate: %s", movie3.date);
+        printf("\nTime: %s", movie3.time);
+        printf("\nPrice: RM %.2f", movie3.price);
     }
 
     if (userInput == 1)
     {
-        drstrange = getSeat1();
+        movie1 = getSeat1();
         printf("\nDisplaying information\n");
-        printf("Name: %s", drstrange.name);
-        printf("\nHall: %d", drstrange.hall);
-        printf("\nDate: %s", drstrange.date);
-        printf("\nTime: %s", drstrange.time);
-        printf("\nPrice: RM %.2f", drstrange.price);
-        printf("\nSeat: %d", drstrange.seat);
+        printf("Name: %s", movie1.name);
+        printf("\nHall: %d", movie1.hall);
+        printf("\nDate: %s", movie1.date);
+        printf("\nTime: %s", movie1.time);
+        printf("\nPrice: RM %.2f", movie1.price);
+        printf("\nSeat: %d", movie1.seat);
     }
     else if (userInput == 2)
     {
-        fantastic = getSeat2();
+        movie2 = getSeat2();
         printf("\nDisplaying information\n");
-        printf("Name: %s", fantastic.name);
-        printf("\nHall: %d", fantastic.hall);
-        printf("\nDate: %s", fantastic.date);
-        printf("\nTime: %s", fantastic.time);
-        printf("\nPrice: RM %.2f", fantastic.price);
-        printf("\nSeat: %d", fantastic.seat);
+        printf("Name: %s", movie2.name);
+        printf("\nHall: %d", movie2.hall);
+        printf("\nDate: %s", movie2.date);
+        printf("\nTime: %s", movie2.time);
+        printf("\nPrice: RM %.2f", movie2.price);
+        printf("\nSeat: %d", movie2.seat);
     }
     else if (userInput == 3)
     {
-        resident = getSeat2();
+        movie3 = getSeat2();
         printf("\nDisplaying information\n");
-        printf("Name: %s", resident.name);
-        printf("\nHall: %d", resident.hall);
-        printf("\nDate: %s", resident.date);
-        printf("\nTime: %s", resident.time);
-        printf("\nPrice: RM %.2f", resident.price);
-        printf("\nSeat: %d", resident.seat);
+        printf("Name: %s", movie3.name);
+        printf("\nHall: %d", movie3.hall);
+        printf("\nDate: %s", movie3.date);
+        printf("\nTime: %s", movie3.time);
+        printf("\nPrice: RM %.2f", movie3.price);
+        printf("\nSeat: %d", movie3.seat);
     }
     else if (userInput == 4)
     {
@@ -206,88 +206,88 @@ int main()
 // function to get seat
 struct movie getSeat1()
 {
-    struct movie drstrange;
+    struct movie movie1;
     printf("Enter seat: ");
-    scanf("%d", &drstrange.seat);
-    strcpy(drstrange.name, "Dr Strange Multiverse of Madness");
-    drstrange.hall = 2;
-    strcpy(drstrange.date, "27-07-2022");
-    strcpy(drstrange.time, "8.00p.m.");
-    drstrange.price = 17.5;
+    scanf("%d", &movie1.seat);
+    strcpy(movie1.name, "Dr Strange Multiverse of Madness");
+    movie1.hall = 2;
+    strcpy(movie1.date, "27-07-2022");
+    strcpy(movie1.time, "8.00p.m.");
+    movie1.price = 17.5;
 
-    return drstrange;
+    return movie1;
 }
 struct movie getSeat2()
 {
-    struct movie fantastic;
+    struct movie movie2;
     printf("Enter seat: ");
-    scanf("%d", &fantastic.seat);
-    strcpy(fantastic.name, "Fantastic Beast The Secrets of Dumbledore");
-    fantastic.hall = 1;
-    strcpy(fantastic.date, "28-07-2022");
-    strcpy(fantastic.time, "4.00p.m.");
-    fantastic.price = 18.50;
+    scanf("%d", &movie2.seat);
+    strcpy(movie2.name, "Fantastic Beast The Secrets of Dumbledore");
+    movie2.hall = 1;
+    strcpy(movie2.date, "28-07-2022");
+    strcpy(movie2.time, "4.00p.m.");
+    movie2.price = 18.50;
 
-    return fantastic;
+    return movie2;
 }
 struct movie getSeat3()
 {
-    struct movie resident;
+    struct movie movie3;
     printf("Enter seat: ");
-    scanf("%d", &resident.seat);
-    strcpy(resident.name, "Resident Evil Welcome to Raccoon City");
-    resident.hall = 1;
-    strcpy(resident.date, "28-07-2022");
-    strcpy(resident.time, "6.00p.m.");
-    resident.price = 19.00;
+    scanf("%d", &movie3.seat);
+    strcpy(movie3.name, "Resident Evil Welcome to Raccoon City");
+    movie3.hall = 1;
+    strcpy(movie3.date, "28-07-2022");
+    strcpy(movie3.time, "6.00p.m.");
+    movie3.price = 19.00;
 
-    return resident;
+    return movie3;
 }
 struct movie edit1()
 {
-    struct movie drstrange;
+    struct movie movie1;
     printf("Enter movie's name: ");
-    scanf("%s", &drstrange.name);
+    scanf("%s", &movie1.name);
     printf("Enter movie's hall: ");
-    scanf("%d", &drstrange.hall);
+    scanf("%d", &movie1.hall);
     printf("Enter movie's date: ");
-    scanf("%s", &drstrange.date);
+    scanf("%s", &movie1.date);
     printf("Enter movie's time: ");
-    scanf("%s", &drstrange.time);
+    scanf("%s", &movie1.time);
     printf("Enter movie's price: ");
-    scanf("%f", &drstrange.price);
+    scanf("%f", &movie1.price);
 
-    return drstrange;
+    return movie1;
 }
 struct movie edit2()
 {
-    struct movie fantastic;
+    struct movie movie2;
     printf("Enter movie's name: ");
-    scanf("%s", &fantastic.name);
+    scanf("%s", &movie2.name);
     printf("Enter movie's hall: ");
-    scanf("%d", &fantastic.hall);
+    scanf("%d", &movie2.hall);
     printf("Enter movie's date: ");
-    scanf("%s", &fantastic.date);
+    scanf("%s", &movie2.date);
     printf("Enter movie's time: ");
-    scanf("%s", &fantastic.time);
+    scanf("%s", &movie2.time);
     printf("Enter movie's price: ");
-    scanf("%f", &fantastic.price);
+    scanf("%f", &movie2.price);
 
-    return fantastic;
+    return movie2;
 }
 struct movie edit3()
 {
-    struct movie resident;
+    struct movie movie3;
     printf("Enter movie's name: ");
-    scanf("%s", &resident.name);
+    scanf("%s", &movie3.name);
     printf("Enter movie's hall: ");
-    scanf("%d", &resident.hall);
+    scanf("%d", &movie3.hall);
     printf("Enter movie's date: ");
-    scanf("%s", &resident.date);
+    scanf("%s", &movie3.date);
     printf("Enter movie's time: ");
-    scanf("%s", &resident.time);
+    scanf("%s", &movie3.time);
     printf("Enter movie's price: ");
-    scanf("%f", &resident.price);
+    scanf("%f", &movie3.price);
 
-    return resident;
+    return movie3;
 }
