@@ -14,7 +14,7 @@ float taxCalc(float subTotal, float taxRate)
     float tax = (subTotal * taxRate) / 100;
     return tax;
 }
-
+// main program
 int main(void)
 {
     //	Local Declarations
@@ -59,11 +59,12 @@ int main(void)
     printf("\n Press Any Key To Generate Bill");
     printf("\n\n\t\t\t\t\tBill Generated. \n\n");
 
-    //	Calculation Statements
+    //	Calculation Statements using array
     for (int i = 0; i < 5; i++)
     {
         subTotal += total[i];
     }
+    // calling function to calculate food price
     float tax = taxCalc(subTotal, taxRate);
     float finalPrice = totalPrice(subTotal, tax);
 
