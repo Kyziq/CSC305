@@ -19,16 +19,8 @@ struct movie
     int seat;
     float price;
 };
-struct movie edit1();
-struct movie edit2();
-struct movie edit3();
 
 /* User-defined functions */
-void exitProgram()
-{
-    printf("See you soon!\n");
-    exit(0);
-}
 int welcomeMessage()
 {
     // Login
@@ -44,7 +36,12 @@ int welcomeMessage()
     return loginInput;
 }
 
-// All movie details
+void exitProgram()
+{
+    printf("See you soon!\n");
+    exit(0);
+}
+
 struct movie editMovie(int movieID)
 {
     struct movie movie[3];
