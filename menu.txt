@@ -1,0 +1,21 @@
+Nachos
+5.00
+
+Keropok Lekor (Small)
+2.00
+
+Keropok Lekor (Large)
+3.50
+
+Nasi Lemak
+4.50
+
+Burger
+3.50
+
+Drink (Small)
+2.00
+
+Drink (Large)
+3.00
+
